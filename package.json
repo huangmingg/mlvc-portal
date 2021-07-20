@@ -9,9 +9,11 @@
     "lintfix": "eslint --ext .js,.vue src --fix"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
     "bootstrap-vue": "^2.21.2",
     "core-js": "^3.9.1",
+    "papaparse": "^5.3.1",
     "vue": "^2.6.12",
     "vue-chartjs": "^3.5.1",
     "vue-loading-overlay": "^3.4.2",

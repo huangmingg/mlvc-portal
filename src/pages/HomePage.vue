@@ -11,11 +11,15 @@
 
 <script>
 
+import { parseCsv } from '@/services/utility.service';
+import { getFunction } from '@/services/predict.service';
 
 export default {
   name: 'HomePage',
 
   async created() {
+    parseCsv();
+    getFunction();
   },
 
   async mounted() {
