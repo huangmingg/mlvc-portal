@@ -21,3 +21,7 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+dist/js/app.07937fd3.js
+dist/js/app.07937fd3.js.map
+dist/js/chunk-vendors.605c0257.js
+dist/js/chunk-vendors.605c0257.js.map
