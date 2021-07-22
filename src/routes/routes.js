@@ -1,8 +1,10 @@
 import HomePage from '@/pages/HomePage';
 import PredictPage from '@/pages/PredictPage';
-import CompanyPage from '@/pages/CompanyPage';
+import CompanyListPage from '@/pages/CompanyListPage';
+import CompanyDetailPage from '@/pages/CompanyDetailPage';
 import ReferencePage from '@/pages/ReferencePage';
 import NotFoundPage from '@/pages/NotFoundPage';
+import RouterViewWrapper from '@/pages/RouterViewWrapper';
 
 export const routes = [
   {
@@ -19,7 +21,17 @@ export const routes = [
   },
   {
     path: '/company',
-    component: CompanyPage,
+    component: RouterViewWrapper,
+    children: [
+      {
+        path: '',
+        component: CompanyListPage,
+      },
+      {
+        path: ':id',
+        component: CompanyDetailPage,
+      },
+    ],
   },
   {
     path: '/reference',
