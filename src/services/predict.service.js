@@ -6,5 +6,11 @@ const getFunction = async () => {
   return res;
 };
 
-export { getFunction };
+const postCompanyDetails = async (obj) => {
+};
+
+export { 
+  getFunction,
+  postCompanyDetails,
+};
 
