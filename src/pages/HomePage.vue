@@ -7,37 +7,48 @@
       <div class="container100">
         <div class="container50">
           <div>
-            <h2 style="margin-bottom: 10px;">About Project</h2>
-            <p>The MLVC project aims to provide insight into the Startup & Venture Capital industry<br/>
+            <h2 style="margin-bottom: 10px;">
+              About Project
+            </h2>
+            <p>
+              The MLVC project aims to provide insight into the Startup & Venture Capital industry<br>
               ++what the application does
             </p>
           </div>
-          <br/>
+          <br>
           <div>
-            <h2 style="margin-bottom: 10px;">Motivations of Project</h2>
+            <h2 style="margin-bottom: 10px;">
+              Motivations of Project
+            </h2>
             <p>Something</p>
           </div>
-          <br/>
+          <br>
           <div>
-            <h2 style="margin-bottom: 10px;">Statistics of Data</h2>
+            <h2 style="margin-bottom: 10px;">
+              Statistics of Data
+            </h2>
             <p>Something</p>
           </div>
         </div>
         <div class="container50">
           <div>
-            <h2 style="margin-bottom: 10px;">Team Members</h2>
+            <h2 style="margin-bottom: 10px;">
+              Team Members
+            </h2>
             <p>
-              <b>Team Lead:</b> Huang Ming<br/>
-              <b>Data:</b> David and Jamais<br/>
-              <b>Feature Engineering:</b> Kexin and David<br/>
-              <b>Supervised Learning:</b> Eram<br/>
-              <b>Unsupervised Learning:</b> Daniel<br/>
+              <b>Team Lead:</b> Huang Ming<br>
+              <b>Data:</b> David and Jamais<br>
+              <b>Feature Engineering:</b> Kexin and David<br>
+              <b>Supervised Learning:</b> Eram<br>
+              <b>Unsupervised Learning:</b> Daniel<br>
               <b>Visualisation:</b> Jamais and Kexin
             </p>
           </div>
-          <br/>
+          <br>
           <div>
-            <h2 style="margin-bottom: 10px;">FAQ</h2>
+            <h2 style="margin-bottom: 10px;">
+              FAQ
+            </h2>
             <div>
               <b>How do I use the toilet?</b>
               <p>Find one, and go</p>
