@@ -4,10 +4,10 @@
       fluid
       class="p-4 bg-light"
     >
-    <b-card-title>
-      Crunchbase Company Data
-    </b-card-title>
-    <hr/>
+      <b-card-title>
+        Crunchbase Company Data
+      </b-card-title>
+      <hr>
       <b-table
         responsive
         fixed 
@@ -23,8 +23,7 @@
         :current-page="currentPage"
         :per-page="perPage"
         @row-selected="rowSelected"
-        >
-      </b-table>
+      />
       <b-col>
         <b-pagination
           v-model="currentPage"
@@ -38,7 +37,6 @@
         />
       </b-col>
     </b-container>
-
   </div>
 </template>
 
