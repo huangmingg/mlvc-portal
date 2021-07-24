@@ -4,7 +4,7 @@
       fluid
       class="p-4 bg-light"
     >
-      <b-card-title>
+      <b-card-title class="mx-2">
         Crunchbase Company Data
       </b-card-title>
       <hr>
@@ -51,6 +51,14 @@ export default {
     return {
       fields: [
         {
+          key: 'id',
+          sortable: false,
+        },
+        {
+          key: 'name',
+          sortable: true,
+        },
+        {
           key: 'location',
           sortable: true,
         },
@@ -65,7 +73,7 @@ export default {
         },
       ],
       isBusy: false,
-      sortBy: 'location',
+      sortBy: 'id',
       sortDesc: false,
       currentPage: 1,
       perPage: 20,
@@ -73,8 +81,9 @@ export default {
     };
   },
   methods: {
-    rowSelected(company) {
-      router.push(`company/${1}`);
+    rowSelected(company_array) {
+      const company = company_array.length ? company_array[0] : null;
+      router.push(`company/${company?.id}`);
     },
     async companyServiceProvider(ctx) {
       try 

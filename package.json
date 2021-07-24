@@ -9,6 +9,7 @@
     "lintfix": "eslint --ext .js,.vue src --fix"
   },
   "dependencies": {
+    "@vueform/multiselect": "^2.0.1",
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
     "bootstrap-vue": "^2.21.2",
@@ -16,6 +17,7 @@
     "vue": "^2.6.12",
     "vue-chartjs": "^3.5.1",
     "vue-loading-overlay": "^3.4.2",
+    "vue-multiselect": "^2.1.6",
     "vue-router": "^3.5.1",
     "vuex": "3.6.2"
   },

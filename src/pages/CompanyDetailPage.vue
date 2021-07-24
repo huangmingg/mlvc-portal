@@ -4,30 +4,43 @@
       fluid
       class="p-4 bg-light"
     >
-      Company Detail Page
+      <b-row class="mx-2">
+        <b-button
+          variant="info"
+          @click="back()"
+        >
+          Back
+        </b-button>
+      </b-row>
+      <hr class="dropdown-divider">
+      <b-form class="mx-3">
+        <b-row>
+          {{ company.name }}
+        </b-row>
+      </b-form>
     </b-container>
   </div>
 </template>
 
 <script>
 
-import { store } from '@/stores';
+import { getCompany } from '@/services/company.service';
+import { router } from '@/routes';
 
 export default {
   name: 'CompanyDetailPage',
   data() {
     return {
       companyId: '',
+      company: {},
     };
   },
-  computed: {
-    items() {
-      return store.getters.getCompanyList;
-    },
+  back() {
+    router.back();
   },
   async created() {
     this.companyId = this.$route.params.id;
-    console.log(this.companyId);
+    this.company = await getCompany(this.companyId);
   },
   async mounted() {
   },
