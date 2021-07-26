@@ -207,7 +207,7 @@
       <b-col>
         <b-button
           class="float-right"
-          variant="info"
+          variant="primary"
           @click="onSubmit"
         >
           Submit
@@ -253,7 +253,7 @@ export default {
         numberOfLeadInvestors: 6,
         totalProductActive: 10,
         numberOfEmployeeProfile: 45,
-        industries: [],
+        industries: ['Wealth Management', 'Hedge Funds'],
       },
     };
   },
