@@ -1,5 +1,6 @@
 import HomePage from '@/pages/HomePage';
 import PredictPage from '@/pages/PredictPage';
+import ReportPage from '@/pages/ReportPage';
 import CompanyListPage from '@/pages/CompanyListPage';
 import CompanyDetailPage from '@/pages/CompanyDetailPage';
 import ReferencePage from '@/pages/ReferencePage';
@@ -17,7 +18,17 @@ export const routes = [
   },
   {
     path: '/predict',
-    component: PredictPage,
+    component: RouterViewWrapper,
+    children: [
+      {
+        path: '',
+        component: PredictPage,
+      },
+      {
+        path: 'report',
+        component: ReportPage,
+      },
+    ],
   },
   {
     path: '/company',

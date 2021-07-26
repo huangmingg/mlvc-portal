@@ -2,8 +2,7 @@
   <div>
     <b-navbar
       toggleable="lg"
-      type="dark"
-      variant="info"
+      variant="primary"
     >
       <b-navbar-brand>MLVC Portal</b-navbar-brand>
       <b-navbar-toggle target="nav-collapse" />
@@ -54,5 +53,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>

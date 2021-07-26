@@ -7,7 +7,7 @@
       <b-row class="mx-2">
         <b-button
           variant="info"
-          @click="back()"
+          @click="back"
         >
           Back
         </b-button>
@@ -35,9 +35,7 @@ export default {
       company: {},
     };
   },
-  back() {
-    router.back();
-  },
+
   async created() {
     this.companyId = this.$route.params.id;
     this.company = await getCompany(this.companyId);
@@ -45,6 +43,9 @@ export default {
   async mounted() {
   },
   methods: {
+    back() {
+      router.back();
+    },
   },
 };
 </script>

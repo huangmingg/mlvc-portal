@@ -29,17 +29,15 @@
             separable based on total funding amount. 
           </p>
         </div>
-      
+        <hr>
         <img
-          src="#"
-          width="200px"
-          height="200px"
-          alt="Results"
-          class="ml-auto mr-auto"
-          style="align-self: center;"
+          src="@/assets/reference_data_1.png"
+          alt="Results" 
+          class="ml-auto mr-auto" 
+          style="align-self: center"
         > 
-      
         <div class="col-12">
+          <hr>
           <p>
             Another observation is that the average number of active products being sold decreases as start-ups receive more funding. 
             This could be an indication that having fewer products is correlated with high funding amount. 
@@ -64,14 +62,23 @@
         </div>
 
         <div class="col-12">
-          <p>Below is a brief overview of the K-Means algorithm:</p>
+          <p style="margin-bottom: 0px;">
+            <strong>Below is a brief overview of the K-Means algorithm</strong>:
+          </p>
           <ol>
-            <li>Step 1</li>
-            <li>Step 2</li>
+            <li>Randomly select K datapoints from the dataset that will serve as the initial cluster centroids</li>
+            <li>
+              For each data point, compute the sum of squared distance between it and the cluster centroids. 
+              Assign each data point the closest cluster centroid.
+            </li>
+            <li>Re-compute the cluster centroids by taking the average of all the data points that belong to that cluster.</li>
+            <li>Repeat steps 2-3 until there is no change to the centroids</li>
           </ol>
         </div>
         <div class="col-12">
-          <p><strong>Limitations</strong></p>
+          <p style="margin-bottom: 0px;">
+            <strong>Limitations</strong>
+          </p>
           <ul>
             <li>Unable to handle categorical variables</li>
           </ul>
@@ -86,7 +93,8 @@
         <div class="col-12">
           <p>
             K-Modes is an extension of the K-Means that deals with categorical variables. 
-            Instead of using Euclidian distance, it uses dissimilarities and frequency-based method (mode) to update the cluster centroids. 
+            Instead of using Euclidian distance to obtain the distance between two points, 
+            it uses dissimilarities and frequency-based method (mode) to update the cluster centroids. 
           </p>
           <p>
             Matching dissimilarity score between two points is given by the total number of mismatches for all the categorical variables. 
@@ -138,13 +146,12 @@
             lines in the dendrogram, the more the distance there is between those clusters. We set the threshold where it cuts 
             the tallest vertical line. 
           </p>
+          <hr>
         </div>
         <img
-          src="#"
-          width="200px"
-          height="200px"
-          alt="dendrogram"
-          class="ml-auto mr-auto"
+          src="@/assets/reference_data_2.png"
+          alt="dendrogram" 
+          class="ml-auto mr-auto" 
           style="align-self: center;"
         > 
       </b-row>

@@ -9,11 +9,14 @@
     "lintfix": "eslint --ext .js,.vue src --fix"
   },
   "dependencies": {
+    "@highcharts/map-collection": "^1.1.3",
     "@vueform/multiselect": "^2.0.1",
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
     "bootstrap-vue": "^2.21.2",
     "core-js": "^3.9.1",
+    "highcharts": "^9.1.2",
+    "highcharts-vue": "^1.4.0",
     "vue": "^2.6.12",
     "vue-chartjs": "^3.5.1",
     "vue-loading-overlay": "^3.4.2",
