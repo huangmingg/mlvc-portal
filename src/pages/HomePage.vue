@@ -3,7 +3,6 @@
     <b-container
       fluid
       class="p-4 bg-light background-container"
-      style=" margin-top: 3%; width: 70%"
     >
       <div
         class="container100"
@@ -33,14 +32,15 @@
             <p>
               According to Crunchbase, Global venture capital funding in the first half of 2021 shattered records as
               more than $288 billion was invested worldwide. How are these startups fundraising so much money? Are there
-              key metrics in which these startups
+              key metrics in which these startups have that spawned their success? With that, our team set out with this
+              in mind and this project was born.
             </p>
           </div>
           <div
             class="container50-2"
           >
             <h2 style="margin-bottom: 10px;">
-              Statistics of Data
+              Basic Statistics of Data
             </h2>
             <table style="width:80%">
               <tr>
@@ -80,7 +80,7 @@
             <table style="width:80%">
               <tr>
                 <th>Team</th>
-                <th>Name</th>
+                <th>Name(s)</th>
               </tr>
               <tr>
                 <td>Team Lead</td>
@@ -114,16 +114,24 @@
               FAQ
             </h2>
             <div>
-              <b>How do I use the toilet?</b>
+              <b>How is the prediction score calculated and what is the accuracy?</b>
               <p>Find one, and go</p>
             </div>
             <div>
-              <b>How do I use the toilet?</b>
-              <p>Find one, and go</p>
+              <b>Can i download the data?</b>
+              <p>Sure, go ahead.</p>
             </div>
             <div>
-              <b>How do I use the toilet?</b>
-              <p>Find one, and go</p>
+              <b>Can i see/download the code?</b>
+              <p>Sure, our github repo is <a href="https://github.com/NUS-Fintech-Society/ML_VC-Library">here</a>.</p>
+            </div>
+            <div>
+              <b>Do you intend to maintain the website/data</b>
+              <p>Nope.</p>
+            </div>
+            <div>
+              <b>Are we interested in commercialising the project?</b>
+              <p>Thank you for considering but no.</p>
             </div>
           </div>
         </div>
@@ -164,6 +172,9 @@ export default {
 }
 
 .background-container {
+  display: block;
+  margin-top: 5%;
+  width: 70%;
   border-radius: 20px;
   box-shadow:
   0 2.8px 2.2px rgba(0, 0, 0, 0.034),
