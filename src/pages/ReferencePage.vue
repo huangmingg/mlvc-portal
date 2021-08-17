@@ -246,7 +246,7 @@
             Model Selection
           </b-button>
           <b-collapse
-            id="collapse-1-inner-2"
+            id="collapse-2-inner-2"
             class="mt-2"
           >
             <b-card>
