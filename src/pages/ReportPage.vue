@@ -4,7 +4,7 @@
     class="p-4 bg-light"
   >
     <b-row class="mx-2">
-      <b-card-title >
+      <b-card-title>
         {{ prediction.company.name }} Report
       </b-card-title>
     </b-row>
