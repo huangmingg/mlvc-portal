@@ -25,8 +25,10 @@ export const routes = [
         component: PredictPage,
       },
       {
+        name: 'report',
         path: 'report',
         component: ReportPage,
+        props: true,
       },
     ],
   },

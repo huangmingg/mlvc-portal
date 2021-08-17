@@ -24,8 +24,12 @@ export default {
   },
   methods: {
     async submitPrediction(form) {
-      await postPrediction(form);
-      router.push(`predict/report`);
+      const resp = await postPrediction(form);
+      console.log(resp);
+      router.push({
+        name: 'report',
+        params: { response: resp },
+      });
     },
   },
 };

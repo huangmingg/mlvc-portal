@@ -12,9 +12,77 @@ import HighchartsMore from 'highcharts/highcharts-more';
 HighchartsMore(HighCharts);
 
 export default {
-  name: 'PolarChart',
+  name: 'CompanyPolarChart',
   components: {
     highcharts: Chart,
+  },
+  props: {
+    title: {
+      type: String,
+      default: function () {
+        return '';
+      },
+    },
+    subtitle: {
+      type: String,
+      default: function () {
+        return '';
+      },
+    },
+    name: {
+      type: String,
+      default: function () {
+        return '';
+      },
+    },    
+    min: {
+      type: Number,
+      default: function () {
+        return 0;
+      },
+    },
+    max: {
+      type: Number,
+      default: function () {
+        return 360;
+      },
+    },
+    attribute: {
+      type: Array,
+      default: function () {
+        return [];
+      },
+    },
+    map: {
+      type: Object,
+      default: function () {
+        return {};
+      },
+    },
+    lower: {
+      type: Array,
+      default: function () {
+        return [];
+      },
+    },
+    company: {
+      type: Array,
+      default: function () {
+        return [];
+      },
+    },
+    median: {
+      type: Array,
+      default: function () {
+        return [];
+      },
+    },
+    upper: {
+      type: Array,
+      default: function () {
+        return [];
+      },
+    },
   },
   data() {
     return {
@@ -22,60 +90,70 @@ export default {
         chart: {
           polar: true,
         },
-
         title: {
-          text: 'Highcharts Polar Charts',
+          text: this.title,
         },
-
         subtitle: {
-          text: 'Also known as Radar Chart',
+          text: this.subtitle,
         },
-
         pane: {
-          startAngle: 0,
-          endAngle: 360,
+          startAngle: this.min,
+          endAngle: this.max,
         },
-
         xAxis: {
-          tickInterval: 45,
-          min: 0,
-          max: 360,
-          labels: {
-            format: '{value}°',
-          },
+          tickInterval: this.max / (this.attribute.length || 1),
+          min: this.min,
+          max: this.max,
+          categories: this.getCategoryLabel(),
         },
-
         yAxis: {
           min: 0,
         },
-
         plotOptions: {
           series: {
-            pointStart: 0,
-            pointInterval: 45,
+            pointStart: this.min,
+            pointInterval: this.max / (this.attribute.length || 1),
           },
           column: {
             pointPadding: 0,
             groupPadding: 0,
           },
         },
-
         series: [{
-          type: 'column',
-          name: 'Column',
-          data: [8, 7, 6, 5, 4, 3, 2, 1],
-          pointPlacement: 'between',
+          type: 'line',
+          name: 'Upper',
+          color: '#FFA500',
+          data: this.upper,
         }, {
           type: 'line',
-          name: 'Line',
-          data: [1, 2, 3, 4, 5, 6, 7, 8],
+          name: 'Lower',
+          color: '#808080',
+          data: this.lower,
+        }, {
+          type: 'line',
+          name: 'Median',
+          color: '#FF0000',
+          data: this.median,
         }, {
           type: 'area',
-          name: 'Area',
-          data: [1, 8, 2, 7, 3, 6, 4, 5],
+          name: this.name,
+          data: this.company,
         }],
       },
     };
+  },
+  methods: {
+    getCategoryLabel() {
+      const arr = new Array(this.max);
+      const interval = this.max / (this.attribute.length || 1);
+      let index = 0;
+      for (let x = this.min; x < this.max; x = x + interval) {
+        const value = this.map[this.attribute[index]];
+        index += 1;
+        arr[x] = value;
+      }
+      return arr;
+    },
   },
 };
 </script>

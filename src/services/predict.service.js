@@ -1,11 +1,11 @@
 import axios from 'axios';
 import { mlvcServiceEndpoint } from '@/environments/environment.default';
-import { camelToUnderscore } from './utility.service';
+import { camelToUnderscore, toCamel } from './utility.service';
 import { store } from '@/stores';
 
-const predict_endpoint = `${mlvcServiceEndpoint}/predict`;
+const predictEndpoint = `${mlvcServiceEndpoint}/predict`;
 
-const format_data_to_body = (data) => 
+const formatDataToBody = (data) => 
 {
   const body = {};
   for (const [key, value] of Object.entries(data))
@@ -17,13 +17,14 @@ const format_data_to_body = (data) =>
 
 const postPrediction = async (obj, saveState = true) => 
 {
-  const body = format_data_to_body(obj);
-  const response = await axios.post(`${predict_endpoint}/`, body);
+  const body = formatDataToBody(obj);
+  const response = await axios.post(`${predictEndpoint}/`, body);
   if (response.status === 200)
   {
-    saveState ? await store.dispatch('updatePrediction', response.data) : null;
-    console.log(store.getters.getPrediction);
-    return response.data;
+    const result = toCamel(response.data);
+    saveState ? await store.dispatch('updatePrediction', result) : null;
+    console.log(result);
+    return result;
   } else 
   {
     throw new ErrorEvent('Failed to post prediction');

@@ -22,6 +22,18 @@
           />
         </b-form-group>
 
+        <b-form-group
+          id="input-group-2"
+          label="Startup Location:"
+          label-for="input-2"
+        >
+          <multiselect 
+            id="input-2"
+            v-model="form.country" 
+            :options="countryOptions"
+          />
+        </b-form-group>
+
         <b-form-group 
           id="input-group-7"
           label="Company Type"
@@ -128,6 +140,18 @@
           />
         </b-form-group>
 
+        <b-form-group
+          id="input-group-15"
+          label="Number Of Active Tech Count"
+          label-for="input-15"
+        >
+          <b-form-input
+            id="input-15"
+            v-model="form.activeTechCount"
+            type="number"
+            required
+          />
+        </b-form-group>
 
         <b-form-group
           id="input-group-10"
@@ -223,6 +247,7 @@ import Multiselect from 'vue-multiselect';
 import { employees } from '@/data/employee';
 import { industries } from '@/data/industry';
 import { lastFundingTypes } from '@/data/lastFundingType';
+import { countries } from '@/data/country';
 
 export default {
   name: 'PredictPage',
@@ -238,8 +263,10 @@ export default {
       employeeOptions: employees,
       industryOptions: industries,
       lastFundingTypeOptions: lastFundingTypes,
+      countryOptions: countries,
       form: {
         name: 'Test Company',
+        country: 'Singapore',
         companyType: 'For Profit',
         employee: '11-50',
         description: 'Test Description',
@@ -252,6 +279,7 @@ export default {
         numberOfLeadInvestments: 5,
         numberOfLeadInvestors: 6,
         totalProductActive: 10,
+        activeTechCount: 0,
         numberOfEmployeeProfile: 45,
         industries: ['Wealth Management', 'Hedge Funds'],
       },

@@ -2,11 +2,11 @@ import axios from 'axios';
 import { mlvcServiceEndpoint } from '../environments/environment.default';
 import { store } from '@/stores';
 
-const company_endpoint = `${mlvcServiceEndpoint}/company`;
+const companyEndpoint = `${mlvcServiceEndpoint}/company`;
 
 const getCompany = async (id, saveState = true) => 
 {
-  const request = await axios.get(`${company_endpoint}/${id}`);
+  const request = await axios.get(`${companyEndpoint}/${id}`);
   if (request.status === 200)
   {
     const company = request.data;
@@ -20,7 +20,7 @@ const getCompany = async (id, saveState = true) =>
 
 const getCompanies = async (page, rowCount, orderBy, is_descending, saveState = true) => 
 {
-  const request = await axios.get(company_endpoint, 
+  const request = await axios.get(companyEndpoint, 
     { 
       params: 
         { 
