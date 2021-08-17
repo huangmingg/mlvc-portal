@@ -9,8 +9,8 @@
           <h1> Unsupervised Learning </h1>
           <p> 
             In this project, we sought to find distinct clusters of start-ups with similar 
-            characteristics to uncover insights on their growth prospect. We used K-means, 
-            K-prototype and Hierarchical Clustering to cluster the start-ups. More details about 
+            characteristics to uncover insights on their growth prospect. We used K-prototype, 
+            K-means, and Hierarchical Clustering to cluster the start-ups. More details about 
             each clustering approach can be found below.
           </p>
         </div>
