@@ -1,14 +1,17 @@
 <template>
-  <div>
-    <div> 
+  <b-container
+    fluid
+    class="p-4 bg-light"
+  >
+    <div class="mx-2"> 
       <h2> References </h2>
       <p>Click on the labels to find out more.</p>
     </div>
-    <div>
+    <div class="mx-2">
       <b-button
         v-b-toggle.collapse-1
         variant="primary"
-        class="collapsebtnpri"
+        class="collapse-btn-pri"
       >
         Unsupervised Learning
       </b-button>
@@ -26,7 +29,7 @@
           <b-button
             v-b-toggle.collapse-1-inner-1
             size="sm"
-            class="collapsebtnsec"
+            class="collapse-btn-sec"
           >
             Results
           </b-button>
@@ -46,21 +49,23 @@
               <img
                 src="@/assets/reference_data_1.png"
                 alt="Results" 
-                class="ml-auto mr-auto" 
+                class="ml-auto mr-auto center" 
                 style="align-self: center"
               >
-              <p>
-                Another observation is that the average number of active products being sold decreases as start-ups receive more funding. 
-                This could be an indication that having fewer products is correlated with high funding amount. 
-                Perhaps, start-ups with fewer products are able to devote more time and effort to develop and grow their business. 
-                Being more focused on certain products may also give investors greater confidence in the start-up. 
-              </p>
+              <div class="col-12">
+                <p>
+                  Another observation is that the average number of active products being sold decreases as start-ups receive more funding. 
+                  This could be an indication that having fewer products is correlated with high funding amount. 
+                  Perhaps, start-ups with fewer products are able to devote more time and effort to develop and grow their business. 
+                  Being more focused on certain products may also give investors greater confidence in the start-up. 
+                </p>
+              </div>
             </b-card>
           </b-collapse>
           <b-button
             v-b-toggle.collapse-1-inner-2
             size="sm"
-            class="collapsebtnsec"
+            class="collapse-btn-sec"
           >
             K-Means Clustering
           </b-button>
@@ -69,7 +74,6 @@
             class="mt-2"
           >
             <b-card>
-              <div class="col-12">
                 <div class="col-12">
                   <p>
                     K-Means algorithm is one of the most popular unsupervised clustering algorithm. 
@@ -100,13 +104,12 @@
                     <li>Unable to handle categorical variables</li>
                   </ul>
                 </div>
-              </div>
             </b-card>
           </b-collapse>
           <b-button
             v-b-toggle.collapse-1-inner-3
             size="sm"
-            class="collapsebtnsec"
+            class="collapse-btn-sec"
           >
             K-modes
           </b-button>
@@ -137,7 +140,7 @@
           <b-button
             v-b-toggle.collapse-1-inner-4
             size="sm"
-            class="collapsebtnsec"
+            class="collapse-btn-sec"
           >
             K-Prototyping Clustering
           </b-button>
@@ -158,7 +161,7 @@
           <b-button
             v-b-toggle.collapse-1-inner-5
             size="sm"
-            class="collapsebtnsec"
+            class="collapse-btn-sec"
           >
             Hierachical Clustering
           </b-button>
@@ -190,7 +193,7 @@
               <img
                 src="@/assets/reference_data_2.png"
                 alt="dendrogram" 
-                class="ml-auto mr-auto" 
+                class="ml-auto mr-auto center" 
                 style="align-self: center;"
               > 
             </b-card>
@@ -199,11 +202,11 @@
       </b-collapse>
     </div>
 
-    <div>
+    <div class="mx-2">
       <b-button
         v-b-toggle.collapse-2
         variant="primary"
-        class="collapsebtnpri"
+        class="collapse-btn-pri"
       >
         Supervised Learning
       </b-button>
@@ -221,7 +224,7 @@
           <b-button
             v-b-toggle.collapse-2-inner-1
             size="sm"
-            class="collapsebtnsec"
+            class="collapse-btn-sec"
           >
             Data Wrangling and Preparation
           </b-button>
@@ -245,7 +248,7 @@
           <b-button
             v-b-toggle.collapse-2-inner-2
             size="sm"
-            class="collapsebtnsec"
+            class="collapse-btn-sec"
           >
             Model Selection
           </b-button>
@@ -255,7 +258,6 @@
           >
             <b-card>
               <div class="col-12">
-                <div class="col-12">
                   <p>
                     To select the appropriate model for the prediction, along with XGB we experimented with multiple other models namely,
                     SVM, Decision Trees, kNN and Random Forest. Furthermore, F1 score was our metric of choice to evaluate the models due to
@@ -264,14 +266,13 @@
                     chosen XGB due to its slightly higher F1 score and as it is a better model for imbalanced classification problems
                     due to its self correcting behaviour.
                   </p>
-                </div>
               </div>
             </b-card>
           </b-collapse>
         </b-card>
       </b-collapse>
     </div>
-  </div>
+  </b-container>
 </template>
 
 <script>
@@ -291,22 +292,25 @@ export default {
 </script>
 
 <style scoped>
-  .collapsebtnpri {
+  .collapse-btn-pri {
     color: black;
     font-size: 26px;
     font-weight: bold;
     background-color: white;
     border: 0px;
   }
-  .collapsebtnsec {
+  .collapse-btn-sec {
     color: black;
     font-size: 18px;
     background-color: white;
     border: 0px;
     padding: 0px 25px 0px 25px;
   }
-  hr{
-    color: black;
-    height: 10px;
-  }
+
+  .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 </style>
