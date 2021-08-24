@@ -74,36 +74,36 @@
             class="mt-2"
           >
             <b-card>
-                <div class="col-12">
-                  <p>
-                    K-Means algorithm is one of the most popular unsupervised clustering algorithm. 
-                    It uses Euclidian distance between the points and centroids to determine the location of the 
-                    cluster centroids and which points belong to that particular cluster. 
-                  </p>
-                </div>
+              <div class="col-12">
+                <p>
+                  K-Means algorithm is one of the most popular unsupervised clustering algorithm. 
+                  It uses Euclidian distance between the points and centroids to determine the location of the 
+                  cluster centroids and which points belong to that particular cluster. 
+                </p>
+              </div>
 
-                <div class="col-12">
-                  <p style="margin-bottom: 0px;">
-                    <strong>Below is a brief overview of the K-Means algorithm</strong>:
-                  </p>
-                  <ol>
-                    <li>Randomly select K datapoints from the dataset that will serve as the initial cluster centroids</li>
-                    <li>
-                      For each data point, compute the sum of squared distance between it and the cluster centroids. 
-                      Assign each data point the closest cluster centroid.
-                    </li>
-                    <li>Re-compute the cluster centroids by taking the average of all the data points that belong to that cluster.</li>
-                    <li>Repeat steps 2-3 until there is no change to the centroids</li>
-                  </ol>
-                </div>
-                <div class="col-12">
-                  <p style="margin-bottom: 0px;">
-                    <strong>Limitations</strong>
-                  </p>
-                  <ul>
-                    <li>Unable to handle categorical variables</li>
-                  </ul>
-                </div>
+              <div class="col-12">
+                <p style="margin-bottom: 0px;">
+                  <strong>Below is a brief overview of the K-Means algorithm</strong>:
+                </p>
+                <ol>
+                  <li>Randomly select K datapoints from the dataset that will serve as the initial cluster centroids</li>
+                  <li>
+                    For each data point, compute the sum of squared distance between it and the cluster centroids. 
+                    Assign each data point the closest cluster centroid.
+                  </li>
+                  <li>Re-compute the cluster centroids by taking the average of all the data points that belong to that cluster.</li>
+                  <li>Repeat steps 2-3 until there is no change to the centroids</li>
+                </ol>
+              </div>
+              <div class="col-12">
+                <p style="margin-bottom: 0px;">
+                  <strong>Limitations</strong>
+                </p>
+                <ul>
+                  <li>Unable to handle categorical variables</li>
+                </ul>
+              </div>
             </b-card>
           </b-collapse>
           <b-button
@@ -258,14 +258,14 @@
           >
             <b-card>
               <div class="col-12">
-                  <p>
-                    To select the appropriate model for the prediction, along with XGB we experimented with multiple other models namely,
-                    SVM, Decision Trees, kNN and Random Forest. Furthermore, F1 score was our metric of choice to evaluate the models due to
-                    the imbalanced nature of the final dataset. Among all the models experimented with, the XGB and Random Forest models had
-                    the highest F1 scores indicating that ensemble models worked best for our problem. Between the two best models we have 
-                    chosen XGB due to its slightly higher F1 score and as it is a better model for imbalanced classification problems
-                    due to its self correcting behaviour.
-                  </p>
+                <p>
+                  To select the appropriate model for the prediction, along with XGB we experimented with multiple other models namely,
+                  SVM, Decision Trees, kNN and Random Forest. Furthermore, F1 score was our metric of choice to evaluate the models due to
+                  the imbalanced nature of the final dataset. Among all the models experimented with, the XGB and Random Forest models had
+                  the highest F1 scores indicating that ensemble models worked best for our problem. Between the two best models we have 
+                  chosen XGB due to its slightly higher F1 score and as it is a better model for imbalanced classification problems
+                  due to its self correcting behaviour.
+                </p>
               </div>
             </b-card>
           </b-collapse>
