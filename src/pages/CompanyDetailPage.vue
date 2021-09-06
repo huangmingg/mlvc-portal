@@ -15,7 +15,11 @@
       <hr class="dropdown-divider">
       <b-form class="mx-3">
         <b-row>
-          {{ company.name }}
+          {{ company.name }} 
+          <!-- CHANGE THIS ABOVE -->
+          <DisabledForm 
+            @submitPrediction="submitPrediction"
+          />
         </b-row>
       </b-form>
     </b-container>
@@ -26,9 +30,13 @@
 
 import { getCompany } from '@/services/company.service';
 import { router } from '@/routes';
+import DisabledForm from '@/components/DisabledForm';
 
 export default {
   name: 'CompanyDetailPage',
+  component:{
+    DisabledForm,
+  },
   data() {
     return {
       companyId: '',
